@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#001b3c",
+                    "surface": "#f8f9fa",
+                    "surface-container": "#edeeef",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-secondary": "#ffffff",
+                    "surface-tint": "#3a5f94",
+                    "primary-fixed-dim": "#a7c8ff",
+                    "surface-dim": "#d9dadb",
+                    "inverse-primary": "#a7c8ff",
+                    "inverse-surface": "#2e3132",
+                    "error-container": "#ffdad6",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-container": "#799dd6",
+                    "secondary": "#006a6a",
+                    "primary-container": "#003366",
+                    "tertiary-container": "#611b00",
+                    "on-surface": "#191c1d",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-high": "#e7e8e9",
+                    "secondary-fixed": "#93f2f2",
+                    "on-surface-variant": "#43474f",
+                    "on-primary-fixed-variant": "#1f477b",
+                    "tertiary-fixed-dim": "#ffb59c",
+                    "secondary-container": "#90efef",
+                    "primary": "#001e40",
+                    "on-secondary-container": "#006e6e",
+                    "outline-variant": "#c3c6d1",
+                    "on-tertiary-container": "#f47749",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed-variant": "#822800",
+                    "secondary-fixed-dim": "#76d6d5",
+                    "surface-bright": "#f8f9fa",
+                    "on-secondary-fixed": "#002020",
+                    "background": "#f8f9fa",
+                    "inverse-on-surface": "#f0f1f2",
+                    "primary-fixed": "#d5e3ff",
+                    "surface-variant": "#e1e3e4",
+                    "surface-container-low": "#f3f4f5",
+                    "on-secondary-fixed-variant": "#004f4f",
+                    "tertiary": "#3d0e00",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed": "#ffdbcf",
+                    "on-primary": "#ffffff",
+                    "on-background": "#191c1d",
+                    "outline": "#737780",
+                    "on-tertiary-fixed": "#380c00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body leading-relaxed overflow-x-hidden">
+<!-- TopNavBar (Shared Component Execution) -->
+<nav class="bg-white/70 dark:bg-slate-900/70 backdrop-blur-md docked full-width top-0 sticky z-50 shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-bold tracking-tighter text-blue-950 dark:text-white font-headline">Aegis</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-manrope text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors" href="technology.html">Features</a>
+<a class="font-manrope text-sm font-semibold tracking-tight text-blue-700 dark:text-blue-400 border-b-2 border-blue-700 pb-1" href="solutions.html">Solutions</a>
+<a class="font-manrope text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors" href="solutions.html">Compliance</a>
+<a class="font-manrope text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors" href="pricing.html">Pricing</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-md font-headline font-semibold text-sm scale-95 active:scale-90 transition-transform">Book a Demo</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section: The Clinical Architect Influence -->
+<section class="relative pt-24 pb-32 overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-primary to-primary-container -z-10"></div>
+<div class="absolute right-0 top-0 w-1/2 h-full opacity-20 pointer-events-none -z-10">
+<img alt="" class="w-full h-full object-cover grayscale" data-alt="abstract high-tech medical laboratory background with soft blue lighting and blurred glass apparatus for clinical pharmaceutical research" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmDGh_Fp5G-AVDy1bS4HGHXFPcTlQFzR4ttpm3WcOvCUYcQmMgI9xmiinbTPmQydFikhiJpb-JNS0wYqsCSy-vARVOKatNCGJwpHJHNuyLdE4EfRlKUjVi-XnbTXlHhGfjwI1FCtigMmei0A11B6h9RyLnL-Pg6_mQBGMe20MgHmQ975UYMgdzExNlJW65_ZEDFL6oUNM3RJ9Me7BTv87uRWt5KH3_EUUn1HvM1NvDePzv5VLCmXvfcBrWNQCUp3FWqIDm_x2M4-8q"/>
+</div>
+<div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-12 items-center">
+<div>
+<span class="inline-block px-3 py-1 bg-secondary/20 text-secondary-container text-[10px] font-black uppercase tracking-[0.2em] rounded mb-6">Enterprise Pharmacovigilance</span>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold text-white leading-[1.1] mb-8">Clinical Precision. <br/><span class="text-secondary-fixed">Global Scalability.</span></h1>
+<p class="text-blue-100/80 text-lg max-w-[50ch] mb-10 leading-relaxed">Aegis harmonizes AI-driven insights with strict regulatory rigor, ensuring patient safety through transparent, audit-ready pharmacovigilance workflows.</p>
+<div class="flex gap-4">
+<button class="bg-tertiary-container text-on-tertiary-container px-8 py-4 rounded-xl font-headline font-bold text-base hover:brightness-110 transition-all shadow-xl shadow-black/10">Request Documentation</button>
+<button class="bg-white/10 text-white backdrop-blur-md px-8 py-4 rounded-xl font-headline font-bold text-base border border-white/20 hover:bg-white/20 transition-all">View Certifications</button>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-secondary/10 blur-3xl rounded-full group-hover:bg-secondary/20 transition-all duration-700"></div>
+<div class="relative glass-panel p-8 rounded-full border border-white/10 shadow-2xl overflow-hidden aspect-video flex items-center justify-center">
+<img alt="Data Dashboard" class="w-full h-full object-cover rounded-lg" data-alt="Close up of a sleek modern data interface showing pharmaceutical signal tracking with clean typography and teal graphs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRrSh4Exj0RP4wm7ZPewgjqg6aCHinR1z1endNk79JHcIh_VHtVJdJ0CBCO6D-9Fy0SLmSh5jBVm4jkvKKaAygIfkWS090noF7iwFlNCN1N4mKXTum2qR_svIL7T23LtBTA4FTeZtCuKvfx53Y8jodWdEB8PJgipkSyBiNbE_kTd2L74ZYTzS3iSbuZHdozotsbUC5VrpoK1XCUVtq57Qe20zf31YgdkyoEo2tCGLzBvPox8Laz-PpZyzVazWO8b3Ao5Plzmx_kTSO"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Solutions Explorer: Bento Grid Layout -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-16">
+<h2 class="font-headline text-3xl font-extrabold text-primary mb-4">Core Safety Solutions</h2>
+<p class="text-outline max-w-2xl">Architected for the highest levels of drug safety monitoring, our platform transforms fragmented data into actionable, compliant intelligence.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[600px]">
+<!-- RAG-Powered Generation Card -->
+<div class="md:col-span-8 bg-surface-container-lowest p-10 rounded-full flex flex-col justify-between group hover:-translate-y-2 transition-transform duration-300">
+<div>
+<div class="w-14 h-14 bg-primary-fixed flex items-center justify-center rounded-xl mb-8">
+<span class="material-symbols-outlined text-primary text-3xl">psychology_alt</span>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-4">RAG-Powered Generation</h3>
+<p class="text-on-surface-variant max-w-[50ch] mb-6">Our Retrieval-Augmented Generation engine provides context-aware follow-up queries by referencing local safety databases and historical case narratives in real-time.</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-sm font-medium text-secondary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                    Dynamic narrative synthesis
+                                </li>
+<li class="flex items-center gap-3 text-sm font-medium text-secondary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                    Real-time medical coding (MedDRA)
+                                </li>
+</ul>
+</div>
+<div class="mt-8 pt-8 border-t border-surface-container">
+<a class="text-primary font-bold flex items-center gap-2 group-hover:gap-4 transition-all" href="#">
+                                Explore RAG Architecture <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Response Validation Card -->
+<div class="md:col-span-4 bg-primary p-10 rounded-full text-white flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 bg-white/10 flex items-center justify-center rounded-lg mb-8">
+<span class="material-symbols-outlined text-white">verified_user</span>
+</div>
+<h3 class="font-headline text-xl font-bold mb-4">Response Validation</h3>
+<p class="text-blue-100/70 text-sm leading-relaxed">Automated completeness checks that verify adverse event reports against FDA/EMA mandatory data fields before submission.</p>
+</div>
+<div class="bg-white/5 rounded-xl p-4 mt-8">
+<div class="flex justify-between items-center mb-2">
+<span class="text-[10px] uppercase tracking-wider font-bold opacity-60">Validation Score</span>
+<span class="text-secondary-fixed font-bold">99.8%</span>
+</div>
+<div class="h-1.5 bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-secondary-fixed w-[99.8%]"></div>
+</div>
+</div>
+</div>
+<!-- Audit Trail Card -->
+<div class="md:col-span-12 bg-surface-container-low p-10 rounded-full flex flex-col md:flex-row items-center gap-12 group">
+<div class="flex-1">
+<span class="text-tertiary-container font-black text-[10px] uppercase tracking-widest mb-4 block">Regulatory Safeguard</span>
+<h3 class="font-headline text-2xl font-bold text-primary mb-4">Audit Trail &amp; Immutability</h3>
+<p class="text-outline mb-6">Every AI interaction, decision path, and data modification is captured in a cryptographically sealed log, ensuring total transparency for regulatory bodies.</p>
+<div class="flex flex-wrap gap-3">
+<span class="px-4 py-1.5 bg-white rounded-full text-xs font-semibold text-primary border border-surface-container">21 CFR Part 11</span>
+<span class="px-4 py-1.5 bg-white rounded-full text-xs font-semibold text-primary border border-surface-container">GVP Module I</span>
+<span class="px-4 py-1.5 bg-white rounded-full text-xs font-semibold text-primary border border-surface-container">GDPR Compliant</span>
+</div>
+</div>
+<div class="w-full md:w-1/3 bg-white rounded-xl shadow-lg p-6 rotate-2 group-hover:rotate-0 transition-transform">
+<div class="space-y-4">
+<div class="flex items-center gap-3 border-b border-surface-variant pb-3">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-sm">history</span>
+</div>
+<div>
+<div class="text-[10px] font-bold text-outline">MAR 14, 2024 - 14:22 UTC</div>
+<div class="text-xs font-semibold">Narrative Generated by RAG-01</div>
+</div>
+</div>
+<div class="flex items-center gap-3 border-b border-surface-variant pb-3">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary text-sm">edit_note</span>
+</div>
+<div>
+<div class="text-[10px] font-bold text-outline">MAR 14, 2024 - 14:25 UTC</div>
+<div class="text-xs font-semibold">Pharmacist Review: Validated</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Scenarios Section -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-16">
+<h2 class="font-headline text-4xl font-extrabold text-primary mb-4">Adaptive Intelligence</h2>
+<p class="text-outline">Select a phase to see how Aegis handles specialized follow-up protocols.</p>
+</div>
+<div class="flex justify-center mb-12">
+<div class="inline-flex p-1.5 bg-surface-container-highest rounded-2xl">
+<button class="px-8 py-3 bg-white rounded-xl shadow-sm font-headline font-bold text-sm text-primary transition-all">Clinical Trials</button>
+<button class="px-8 py-3 rounded-xl font-headline font-bold text-sm text-outline hover:text-primary transition-all">Post-Marketing Surveillance</button>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<div class="p-6 bg-white rounded-full shadow-sm border-l-4 border-secondary">
+<h4 class="font-bold text-primary mb-2">Query Strategy</h4>
+<p class="text-sm text-on-surface-variant">Prioritizes causality assessment and blinding integrity during Phase II/III investigations.</p>
+</div>
+<div class="p-6 bg-white/50 rounded-full border border-surface-container">
+<h4 class="font-bold text-outline mb-2">Data Source Integration</h4>
+<p class="text-sm text-outline">Direct API hooks into EDC systems (Rave, Veeva) for real-time reconciliation.</p>
+</div>
+<div class="p-6 bg-white/50 rounded-full border border-surface-container">
+<h4 class="font-bold text-outline mb-2">Expedited Reporting</h4>
+<p class="text-sm text-outline">Automatic generation of CIOMS I and MedWatch 3500A for SAEs.</p>
+</div>
+</div>
+<div class="bg-primary-container rounded-full aspect-square p-12 flex flex-col justify-center relative overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+<img alt="Medical visualization" class="w-full h-full object-cover" data-alt="Abstract microscopic view of medicine molecules with bright blue and teal highlights on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1sZqT2wXEYvKsLuSOykJGLO5KurdhE5TyvHPb8doWHg5b3R375kgX7wbAhwV3hCVP5hIYJDKEo2aqEshvhOaIhmJE_7ZqBX4ekp57NGomdwQPxCl26RjhbkLifq3VUcXcktbGeU2Z9EAqcQ3J6fuXcmipvuuaAQSEsiSbu4WWBiC0zrur5CQofPaUrD-4WBCXCxXq4Ialb8XJeHUXbNurc1dy_7GZhQajNzxjVqatye94zN3_syETepnFCRdRbuz5GaCQ5iTSPjNI"/>
+</div>
+<div class="relative z-10">
+<span class="text-secondary-fixed font-black text-xs uppercase tracking-widest mb-4 block">Process View</span>
+<h3 class="text-3xl font-headline font-extrabold text-white mb-6">Accelerate Signal Detection from Weeks to Seconds.</h3>
+<p class="text-blue-100/70 mb-8 leading-relaxed">By automating the initial follow-up queries, clinical teams reduce manual administrative load by up to 70%, allowing for focused medical analysis.</p>
+<button class="bg-secondary text-white px-6 py-3 rounded-xl font-bold flex items-center gap-2">View Case Study <span class="material-symbols-outlined text-sm">open_in_new</span></button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Global Reach & Map Section -->
+<section class="py-24 bg-surface-container-lowest overflow-hidden">
+<div class="max-w-7xl mx-auto px-8 grid lg:grid-cols-2 gap-20 items-center">
+<div>
+<h2 class="font-headline text-4xl font-extrabold text-primary mb-6">Localized Intelligence, <br/>Global Oversight.</h2>
+<p class="text-outline mb-10 text-lg">Operating across borders requires more than translation—it requires cultural and regulatory localization. Aegis supports global PV operations with specialized language models for each major region.</p>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<div class="text-3xl font-headline font-extrabold text-secondary mb-1">04</div>
+<div class="text-xs font-black uppercase tracking-widest text-outline">Major Languages</div>
+<p class="text-[10px] text-outline mt-2">English, Spanish, Mandarin, Hindi</p>
+</div>
+<div>
+<div class="text-3xl font-headline font-extrabold text-secondary mb-1">05</div>
+<div class="text-xs font-black uppercase tracking-widest text-outline">Primary Regions</div>
+<p class="text-[10px] text-outline mt-2">US, EU, APAC, LATAM, India</p>
+</div>
+</div>
+<div class="mt-12 p-6 bg-surface rounded-xl border border-surface-container">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-secondary">public</span>
+<span class="font-bold text-primary">Cross-Border Data Residency</span>
+</div>
+<p class="text-sm text-outline">Our infrastructure allows for data to stay within region-specific cloud instances (Frankfurt, Mumbai, Singapore, etc.) to comply with local privacy laws.</p>
+</div>
+</div>
+<div class="relative">
+<!-- World Map Visualization Mockup -->
+<div class="bg-primary-container rounded-[2rem] p-4 shadow-2xl relative">
+<img alt="World Map" class="w-full h-auto rounded-[1.5rem] opacity-40 grayscale" data-alt="Stylized glowing world map with network nodes connecting major global cities like New York, London, and Mumbai in blue and teal" data-location="Global" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaIJ5zD55KIDti3y2SvWmwCnkqaannDCWImElCYOkbX49m3_OrZ8ZAas0SalFk73ysR1BCcRt_Pvtt36y0P2qhXtkyraF20zxdlVlRyK80XvbFxaPGHvTDJQFAQL57zBaUHFjvYDtk47SxwPXSD_ZUz4XQ9jRpUwPWtJVI2Bqqn0cQrVST50XnK268sC0kHZAvOZmMtLxuoVjE-ijl6tZAtfGQQ9PHBQC-BOmNr8oADNPFO6FHnVPCafD-GGwwBaV9pvMj_vOmo_kz"/>
+<!-- Pulsing hotspots for regions -->
+<div class="absolute top-1/4 left-1/4 w-3 h-3 bg-secondary-fixed rounded-full shadow-[0_0_20px_#93f2f2]"></div>
+<div class="absolute top-1/3 left-1/2 w-3 h-3 bg-secondary-fixed rounded-full shadow-[0_0_20px_#93f2f2]"></div>
+<div class="absolute bottom-1/3 left-1/3 w-3 h-3 bg-secondary-fixed rounded-full shadow-[0_0_20px_#93f2f2]"></div>
+<div class="absolute top-1/2 right-1/4 w-3 h-3 bg-secondary-fixed rounded-full shadow-[0_0_20px_#93f2f2]"></div>
+<div class="absolute bottom-1/2 right-1/3 w-3 h-3 bg-secondary-fixed rounded-full shadow-[0_0_20px_#93f2f2]"></div>
+<div class="absolute bottom-6 left-6 right-6 glass-panel p-4 rounded-xl flex items-center justify-between border border-white/20">
+<div class="flex gap-2">
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+<span class="text-[10px] font-bold text-primary uppercase">Regional Node Status: Active</span>
+</div>
+<span class="text-[10px] text-primary/60 font-medium italic">Latency: 12ms</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Compliance & Security: Tonal Layering -->
+<section class="py-24 bg-surface-container-high">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row gap-12 items-end mb-16">
+<div class="flex-1">
+<h2 class="font-headline text-4xl font-extrabold text-primary mb-6">Fortified by Design.</h2>
+<p class="text-outline text-lg">Pharmacovigilance is built on trust. Aegis maintains the highest levels of data security and regulatory certifications in the pharmaceutical sector.</p>
+</div>
+<div class="flex gap-4 mb-2">
+<img alt="ISO" class="h-12 w-auto grayscale brightness-0 opacity-40" data-alt="Official ISO 27001 certification seal with dark text and white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZsU_p5IjZ2AataN3CsxZ0CqBS2SedFoN0cvgIc1o_3jyRf1P3CdFnlrmMt0jCDWiy7rvHM7icWFSyz0-zzTBo9jYgP5VkHdvwC6OMUKJV_nt3ycU0t59Oq-SiG2iLQPig0mxCcSve1GAb1dsOjjVjGCYnVYBTaJU4kHNVWZxnqW6GEW1GiojAsXaGJFt74WOCcj94r9UtYOpzzxj_6MmtHey3TcYfxQcJbZ0yHudzZtGRm0KONSQ0vhZmh0_DfYozKOGop4dBqunz"/>
+<img alt="SOC2" class="h-12 w-auto grayscale brightness-0 opacity-40" data-alt="SOC2 Type II compliance emblem badge in minimalist black and white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhkPgNdyQ0uwD3ZDY-bCHnzOudMZn9bmT6ojJF3-bwgjVpjV1jkfkR_3makOl2drFufzbgp7s4Tw9OuQNpAL-ofOmFd1UdfB5eRJMtJLIF_3Jy_wC1Ksp5icc8zSyfiuYksbRSm_YRVqa3l0IpXKOosyVXSLQYIebQb1W0YT9oaRRn6D1Q884Ignlo1vJ2y5EbT7I9tHTIbaMZRqv54sUQZWEe7ID-NV_8b7RUBEPF7D1hye0OBo1USxL2C4cN49U9P9HqgTCCvgMy"/>
+<img alt="HIPAA" class="h-12 w-auto grayscale brightness-0 opacity-40" data-alt="HIPAA compliant seal for healthcare security in professional vector style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5lrFMbzfJps-3xJHdih2eVdnewOjzA8GXZHquWIi9SNc8Ub9E674ig9wyG9wd-XTBXm3qrrCHORGxxvVjcSAFhkHACICj361k92CUoETOf1q4NKdoLMU3NcnkLoaAr9j1UD_FGcZCbfZK9pwUyHDUX4ma2SWuI8b2MOxqqDRR8w7truZicqU8JilBX89dVuGZCBrLSQsLf87-3SwoOuX2EvSoBUNVddByipWAa36fyCnDjqWMjB5KiWCpVNxpiHyQKvYf2WErq8Fy"/>
+</div>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-surface-container-lowest p-8 rounded-full border border-outline-variant/15 group hover:border-secondary transition-colors">
+<div class="text-secondary mb-6"><span class="material-symbols-outlined text-4xl">lock</span></div>
+<h4 class="font-headline font-bold text-xl mb-4">End-to-End Encryption</h4>
+<p class="text-sm text-outline leading-relaxed">AES-256 encryption at rest and TLS 1.3 in transit. We utilize HSM (Hardware Security Modules) for managing cryptographic keys.</p>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-full border border-outline-variant/15 group hover:border-secondary transition-colors">
+<div class="text-secondary mb-6"><span class="material-symbols-outlined text-4xl">shield_with_heart</span></div>
+<h4 class="font-headline font-bold text-xl mb-4">Patient Privacy (PHI)</h4>
+<p class="text-sm text-outline leading-relaxed">Automated PII/PHI redaction tools ensure that sensitive patient information is stripped before AI processing or external review.</p>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-full border border-outline-variant/15 group hover:border-secondary transition-colors">
+<div class="text-secondary mb-6"><span class="material-symbols-outlined text-4xl">fact_check</span></div>
+<h4 class="font-headline font-bold text-xl mb-4">Regulatory Readiness</h4>
+<p class="text-sm text-outline leading-relaxed">Built-in support for E2B(R3) XML export formats and automated PSUR (Periodic Safety Update Reports) generation.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 bg-primary text-center">
+<div class="max-w-3xl mx-auto px-8">
+<h2 class="font-headline text-4xl font-extrabold text-white mb-8">Ready to Architect Your Safety Future?</h2>
+<p class="text-blue-100/60 mb-10 text-lg">Join top-tier pharmaceutical leaders leveraging Aegis to redefine pharmacovigilance excellence.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="bg-on-tertiary-container text-white px-10 py-5 rounded-full font-headline font-extrabold text-lg shadow-2xl hover:scale-105 transition-transform">Schedule Expert Consultation</button>
+<button class="bg-white/10 text-white border border-white/20 px-10 py-5 rounded-full font-headline font-extrabold text-lg backdrop-blur-md">Download Solution Brief</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component Execution) -->
+<footer class="bg-slate-50 dark:bg-slate-950 w-full py-12 px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+<div class="col-span-2 md:col-span-1">
+<div class="text-lg font-black text-blue-900 dark:text-blue-300 mb-6">Aegis</div>
+<p class="font-inter text-xs leading-relaxed text-slate-500 dark:text-slate-400 max-w-[200px] mb-4">Advanced Pharmacovigilance Intelligence for the Global Life Sciences Industry.</p>
+</div>
+<div>
+<div class="font-headline font-bold text-slate-900 dark:text-slate-100 text-sm mb-4">Company</div>
+<ul class="space-y-2">
+<li><a class="font-inter text-xs text-slate-500 dark:text-slate-400 hover:underline" href="#">About Us</a></li>
+<li><a class="font-inter text-xs text-slate-500 dark:text-slate-400 hover:underline" href="#">Careers</a></li>
+<li><a class="font-inter text-xs text-slate-500 dark:text-slate-400 hover:underline" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<div class="font-headline font-bold text-slate-900 dark:text-slate-100 text-sm mb-4">Resources</div>
+<ul class="space-y-2">
+<li><a class="font-inter text-xs text-slate-500 dark:text-slate-400 hover:underline" href="#">Whitepapers</a></li>
+<li><a class="font-inter text-xs text-slate-500 dark:text-slate-400 hover:underline" href="#">API Docs</a></li>
+<li><a class="font-inter text-xs text-slate-500 dark:text-slate-400 hover:underline" href="#">Blog</a></li>
+</ul>
+</div>
+<div>
+<div class="font-headline font-bold text-slate-900 dark:text-slate-100 text-sm mb-4">Legal</div>
+<ul class="space-y-2">
+<li><a class="font-inter text-xs text-slate-500 dark:text-slate-400 hover:underline" href="#">Privacy Policy</a></li>
+<li><a class="font-inter text-xs text-slate-500 dark:text-slate-400 hover:underline" href="#">Terms of Service</a></li>
+<li><a class="font-inter text-xs text-slate-500 dark:text-slate-400 hover:underline" href="#">Cookie Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto pt-12 mt-12 border-t border-slate-200 dark:border-slate-800 flex justify-between items-center">
+<div class="font-inter text-xs text-slate-500 dark:text-slate-400">© 2024 Aegis Pharmacovigilance. All rights reserved.</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-slate-400 hover:text-blue-600 transition-colors cursor-pointer">language</span>
+<span class="material-symbols-outlined text-slate-400 hover:text-blue-600 transition-colors cursor-pointer">podcasts</span>
+</div>
+</div>
+</footer>
+</body></html>
