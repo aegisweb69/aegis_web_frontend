@@ -1,493 +1,818 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html class="scroll-smooth" lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap"
-        rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
     <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
     <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
     <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "on-primary-fixed": "#001b3c",
-                        "surface": "#f8f9fa",
-                        "surface-container": "#edeeef",
-                        "on-error": "#ffffff",
-                        "surface-container-highest": "#e1e3e4",
-                        "on-secondary": "#ffffff",
-                        "surface-tint": "#3a5f94",
-                        "primary-fixed-dim": "#a7c8ff",
-                        "surface-dim": "#d9dadb",
-                        "inverse-primary": "#a7c8ff",
-                        "inverse-surface": "#2e3132",
-                        "error-container": "#ffdad6",
-                        "surface-container-lowest": "#ffffff",
-                        "on-primary-container": "#799dd6",
-                        "secondary": "#006a6a",
-                        "primary-container": "#003366",
-                        "tertiary-container": "#611b00",
-                        "on-surface": "#191c1d",
-                        "on-tertiary": "#ffffff",
-                        "surface-container-high": "#e7e8e9",
-                        "secondary-fixed": "#93f2f2",
-                        "on-surface-variant": "#43474f",
-                        "on-primary-fixed-variant": "#1f477b",
-                        "tertiary-fixed-dim": "#ffb59c",
-                        "secondary-container": "#90efef",
-                        "primary": "#001e40",
-                        "on-secondary-container": "#006e6e",
-                        "outline-variant": "#c3c6d1",
-                        "on-tertiary-container": "#f47749",
-                        "on-error-container": "#93000a",
-                        "on-tertiary-fixed-variant": "#822800",
-                        "secondary-fixed-dim": "#76d6d5",
-                        "surface-bright": "#f8f9fa",
-                        "on-secondary-fixed": "#002020",
-                        "background": "#f8f9fa",
-                        "inverse-on-surface": "#f0f1f2",
-                        "primary-fixed": "#d5e3ff",
-                        "surface-variant": "#e1e3e4",
-                        "surface-container-low": "#f3f4f5",
-                        "on-secondary-fixed-variant": "#004f4f",
-                        "tertiary": "#3d0e00",
-                        "error": "#ba1a1a",
-                        "tertiary-fixed": "#ffdbcf",
-                        "on-primary": "#ffffff",
-                        "on-background": "#191c1d",
-                        "outline": "#737780",
-                        "on-tertiary-fixed": "#380c00"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
-                    },
-                    "fontFamily": {
-                        "headline": ["Manrope"],
-                        "body": ["Inter"],
-                        "label": ["Inter"]
-                    }
-                },
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-fixed": "#001b3c",
+              surface: "#f8f9fa",
+              "surface-container": "#edeeef",
+              "on-error": "#ffffff",
+              "surface-container-highest": "#e1e3e4",
+              "on-secondary": "#ffffff",
+              "surface-tint": "#3a5f94",
+              "primary-fixed-dim": "#a7c8ff",
+              "surface-dim": "#d9dadb",
+              "inverse-primary": "#a7c8ff",
+              "inverse-surface": "#2e3132",
+              "error-container": "#ffdad6",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-container": "#799dd6",
+              secondary: "#006a6a",
+              "primary-container": "#003366",
+              "tertiary-container": "#611b00",
+              "on-surface": "#191c1d",
+              "on-tertiary": "#ffffff",
+              "surface-container-high": "#e7e8e9",
+              "secondary-fixed": "#93f2f2",
+              "on-surface-variant": "#43474f",
+              "on-primary-fixed-variant": "#1f477b",
+              "tertiary-fixed-dim": "#ffb59c",
+              "secondary-container": "#90efef",
+              primary: "#001e40",
+              "on-secondary-container": "#006e6e",
+              "outline-variant": "#c3c6d1",
+              "on-tertiary-container": "#f47749",
+              "on-error-container": "#93000a",
+              "on-tertiary-fixed-variant": "#822800",
+              "secondary-fixed-dim": "#76d6d5",
+              "surface-bright": "#f8f9fa",
+              "on-secondary-fixed": "#002020",
+              background: "#f8f9fa",
+              "inverse-on-surface": "#f0f1f2",
+              "primary-fixed": "#d5e3ff",
+              "surface-variant": "#e1e3e4",
+              "surface-container-low": "#f3f4f5",
+              "on-secondary-fixed-variant": "#004f4f",
+              tertiary: "#3d0e00",
+              error: "#ba1a1a",
+              "tertiary-fixed": "#ffdbcf",
+              "on-primary": "#ffffff",
+              "on-background": "#191c1d",
+              outline: "#737780",
+              "on-tertiary-fixed": "#380c00",
             },
-        }
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            fontFamily: {
+              headline: ["Manrope"],
+              body: ["Inter"],
+              label: ["Inter"],
+            },
+          },
+        },
+      };
     </script>
     <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
 
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-        }
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+      }
     </style>
-</head>
+  </head>
 
-<body class="bg-surface font-body text-on-surface">
+  <body class="bg-surface font-body text-on-surface">
     <!-- TopNavBar -->
     <header
-        class="bg-white/70 dark:bg-slate-900/70 backdrop-blur-md shadow-sm dark:shadow-none docked full-width top-0 sticky z-50">
-        <div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
-            <div class="text-xl font-bold tracking-tighter text-blue-950 dark:text-white font-headline">Aegis</div>
-            <nav class="hidden md:flex items-center gap-8">
-                <a class="font-manrope text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors"
-                    href="technology.html">Features</a>
-                <a class="font-manrope text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors"
-                    href="solutions.html">Solutions</a>
-                <a class="font-manrope text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors"
-                    href="solutions.html">Compliance</a>
-                <a class="font-manrope text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors"
-                    href="pricing.html">Pricing</a>
-            </nav>
-            <div class="flex items-center gap-4">
-                <button
-                    class="hidden md:block px-5 py-2.5 bg-primary-container text-on-primary rounded-md font-semibold text-sm scale-95 active:scale-90 transition-transform">Book
-                    a Demo</button>
-                <button id="mobile-menu-btn" class="md:hidden text-slate-600 dark:text-slate-300 focus:outline-none flex items-center">
-                    <span class="material-symbols-outlined text-2xl">menu</span>
-                </button>
-            </div>
+      class="bg-white/70 dark:bg-slate-900/70 backdrop-blur-md shadow-sm dark:shadow-none docked full-width top-0 sticky z-50"
+    >
+      <div
+        class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto"
+      >
+        <div
+          class="text-xl font-bold tracking-tighter text-blue-950 dark:text-white font-headline"
+        >
+          Aegis
         </div>
-        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white dark:bg-slate-900 shadow-lg border-t border-slate-100 dark:border-slate-800 flex-col z-50">
-            <div class="flex flex-col px-8 py-4 space-y-4">
-                <a class="font-manrope text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors" href="technology.html">Features</a>
-                <a class="font-manrope text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors" href="solutions.html">Solutions</a>
-                <a class="font-manrope text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors" href="solutions.html">Compliance</a>
-                <a class="font-manrope text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors" href="pricing.html">Pricing</a>
-                <button class="px-5 py-3 bg-primary-container text-on-primary rounded-md font-semibold text-sm w-full transition-transform">Book a Demo</button>
-            </div>
+        <nav class="hidden md:flex items-center gap-8">
+          <a
+            class="font-manrope text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors"
+            href="technology.html"
+            >Features</a
+          >
+          <a
+            class="font-manrope text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors"
+            href="solutions.html"
+            >Solutions</a
+          >
+          <a
+            class="font-manrope text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors"
+            href="solutions.html"
+            >Compliance</a
+          >
+          <a
+            class="font-manrope text-sm font-semibold tracking-tight text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors"
+            href="pricing.html"
+            >Pricing</a
+          >
+        </nav>
+        <div class="flex items-center gap-4">
+          <button
+            class="hidden md:block px-5 py-2.5 bg-primary-container text-on-primary rounded-md font-semibold text-sm scale-95 active:scale-90 transition-transform"
+          >
+            Book a Demo
+          </button>
+          <button
+            id="mobile-menu-btn"
+            class="md:hidden text-slate-600 dark:text-slate-300 focus:outline-none flex items-center"
+          >
+            <span class="material-symbols-outlined text-2xl">menu</span>
+          </button>
         </div>
+      </div>
+      <div
+        id="mobile-menu"
+        class="hidden absolute top-full left-0 w-full bg-white dark:bg-slate-900 shadow-lg border-t border-slate-100 dark:border-slate-800 flex-col z-50"
+      >
+        <div class="flex flex-col px-8 py-4 space-y-4">
+          <a
+            class="font-manrope text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors"
+            href="technology.html"
+            >Features</a
+          >
+          <a
+            class="font-manrope text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors"
+            href="solutions.html"
+            >Solutions</a
+          >
+          <a
+            class="font-manrope text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors"
+            href="solutions.html"
+            >Compliance</a
+          >
+          <a
+            class="font-manrope text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors"
+            href="pricing.html"
+            >Pricing</a
+          >
+          <button
+            class="px-5 py-3 bg-primary-container text-on-primary rounded-md font-semibold text-sm w-full transition-transform"
+          >
+            Book a Demo
+          </button>
+        </div>
+      </div>
     </header>
     <main>
-        <!-- Hero Section -->
-        <section class="relative min-h-[921px] flex items-center overflow-hidden bg-primary py-24">
-            <div class="absolute inset-0 z-0 opacity-40">
-                <div class="absolute inset-0 bg-gradient-to-br from-primary via-primary-container to-secondary"></div>
-                <img class="w-full h-full object-cover mix-blend-overlay" data-alt="Image of pills and capsules"
-                    src="https://images.pexels.com/photos/3873146/pexels-photo-3873146.jpeg" />
+      <!-- Hero Section -->
+      <section
+        class="relative min-h-[921px] flex items-center overflow-hidden bg-primary py-24"
+      >
+        <div class="absolute inset-0 z-0 opacity-40">
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-primary via-primary-container to-secondary"
+          ></div>
+          <img
+            class="w-full h-full object-cover mix-blend-overlay"
+            data-alt="Image of pills and capsules"
+            src="https://images.pexels.com/photos/3873146/pexels-photo-3873146.jpeg"
+          />
+        </div>
+        <div class="container mx-auto px-8 relative z-10 max-w-7xl text-center">
+          <div class="max-w-3xl mx-auto">
+            <span
+              class="inline-block px-4 py-1.5 rounded-full bg-secondary/20 text-secondary-fixed text-xs font-bold tracking-widest uppercase mb-6"
+              >AI-First Safety Compliance</span
+            >
+            <h1
+              class="text-5xl md:text-7xl font-headline font-extrabold text-white leading-tight mb-8 tracking-tighter"
+            >
+              Making Pharmacovigilance
+              <span class="text-secondary-fixed">Smarter</span> Through
+              Follow-ups
+            </h1>
+            <p
+              class="text-xl text-blue-100/80 mb-12 max-w-2xl mx-auto leading-relaxed"
+            >
+              <<<<<<< HEAD Automate and optimize Adverse Event Follow-up with
+              enterprise-grade AI. Reduce manual effort while increasing
+              regulatory precision. ======= Automate and optimize Adverse Event
+              Follow-up with enterprise-grade AI. Reduce manual effort while
+              increasing regulatory precision. >>>>>>>
+              20a0b8c5204672c37f6e258d9ba75b68c29f6840
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+              <button
+                class="px-8 py-4 bg-on-tertiary-container text-white rounded-lg font-bold text-lg hover:brightness-110 transition-all shadow-xl shadow-tertiary-container/20"
+              >
+                Book a Demo
+              </button>
+              <button
+                class="px-8 py-4 bg-white/10 text-white border border-white/20 backdrop-blur-sm rounded-lg font-bold text-lg hover:bg-white/20 transition-all"
+              >
+                Explore Features
+              </button>
             </div>
-            <div class="container mx-auto px-8 relative z-10 max-w-7xl text-center">
-                <div class="max-w-3xl mx-auto">
+          </div>
+        </div>
+      </section>
+      <!-- Social Proof -->
+      <section
+        class="py-12 bg-surface-container-low border-y border-outline-variant/10"
+      >
+        <div class="container mx-auto px-8 max-auto text-center">
+          <p
+            class="text-[10px] font-bold text-slate-400 uppercase tracking-[0.3em] mb-8"
+          >
+            Trusted by Global Pharmaceutical Leaders
+          </p>
+          <div
+            class="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-50 grayscale hover:grayscale-0 transition-all"
+          >
+            <div class="text-2xl font-black font-headline text-primary">
+              PHARMACO
+            </div>
+            <div class="text-2xl font-black font-headline text-primary">
+              BIOTECH_X
+            </div>
+            <div class="text-2xl font-black font-headline text-primary">
+              GLOBAL_HEALTH
+            </div>
+            <div class="text-2xl font-black font-headline text-primary">
+              MED_CORP
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Features Showcase (Before/After) -->
+      <section class="py-24 bg-surface">
+        <div class="container mx-auto px-8 max-w-7xl">
+          <div class="text-center mb-20">
+            <h2
+              class="text-4xl font-headline font-extrabold text-primary mb-4 tracking-tight"
+            >
+              Redefining Efficiency
+            </h2>
+            <p class="text-slate-500 max-w-2xl mx-auto">
+              See how Aegis transforms traditional, labor-intensive workflows
+              into streamlined AI-orchestrated safety engines.
+            </p>
+          </div>
+          <div class="grid md:grid-cols-2 gap-8 items-stretch">
+            <!-- Manual Workflow -->
+            <div
+              class="bg-surface-container-low rounded-2xl p-8 border border-outline-variant/5"
+            >
+              <div class="flex items-center gap-3 mb-8">
+                <span class="material-symbols-outlined text-error"
+                  >history</span
+                >
+                <h3
+                  class="font-bold text-primary uppercase tracking-widest text-sm"
+                >
+                  Legacy Manual Workflow
+                </h3>
+              </div>
+              <ul class="space-y-6">
+                <li class="flex gap-4">
+                  <div
+                    class="w-6 h-6 rounded-full bg-error/10 flex items-center justify-center shrink-0"
+                  >
                     <span
-                        class="inline-block px-4 py-1.5 rounded-full bg-secondary/20 text-secondary-fixed text-xs font-bold tracking-widest uppercase mb-6">AI-First
-                        Safety Compliance</span>
-                    <h1
-                        class="text-5xl md:text-7xl font-headline font-extrabold text-white leading-tight mb-8 tracking-tighter">
-                        Making Pharmacovigilance <span class="text-secondary-fixed">Smarter</span> Through Follow-ups
-                    </h1>
-                    <p class="text-xl text-blue-100/80 mb-12 max-w-2xl mx-auto leading-relaxed">
-<<<<<<< HEAD
-                        Automate and optimize Adverse Event Follow-up with enterprise-grade AI.
-                        Reduce manual effort while increasing regulatory precision.
-=======
-                        Automate and optimize Adverse Event Follow-up with enterprise-grade AI. Reduce manual effort while increasing regulatory precision.
->>>>>>> 20a0b8c5204672c37f6e258d9ba75b68c29f6840
-                    </p>
-                    <div class="flex flex-wrap justify-center gap-4">
-                        <button
-                            class="px-8 py-4 bg-on-tertiary-container text-white rounded-lg font-bold text-lg hover:brightness-110 transition-all shadow-xl shadow-tertiary-container/20">Book
-                            a Demo</button>
-                        <button
-                            class="px-8 py-4 bg-white/10 text-white border border-white/20 backdrop-blur-sm rounded-lg font-bold text-lg hover:bg-white/20 transition-all">Explore
-                            Features</button>
-                    </div>
-                </div>
+                      class="material-symbols-outlined text-[14px] text-error"
+                      >close</span
+                    >
+                  </div>
+                  <p class="text-sm text-slate-600">
+                    Manual AE follow-up drafting takes 45-60 mins per case.
+                  </p>
+                </li>
+                <li class="flex gap-4">
+                  <div
+                    class="w-6 h-6 rounded-full bg-error/10 flex items-center justify-center shrink-0"
+                  >
+                    <span
+                      class="material-symbols-outlined text-[14px] text-error"
+                      >close</span
+                    >
+                  </div>
+                  <p class="text-sm text-slate-600">
+                    Human errors in data entry lead to compliance rework.
+                  </p>
+                </li>
+                ip
+                <li class="flex gap-4">
+                  <div
+                    class="w-6 h-6 rounded-full bg-error/10 flex items-center justify-center shrink-0"
+                  >
+                    <span
+                      class="material-symbols-outlined text-[14px] text-error"
+                      >close</span
+                    >
+                  </div>
+                  <p class="text-sm text-slate-600">
+                    Disconnected channels cause fragmented patient history.
+                  </p>
+                </li>
+              </ul>
             </div>
-        </section>
-        <!-- Social Proof -->
-        <section class="py-12 bg-surface-container-low border-y border-outline-variant/10">
-            <div class="container mx-auto px-8 max-auto text-center">
-                <p class="text-[10px] font-bold text-slate-400 uppercase tracking-[0.3em] mb-8">Trusted by Global
-                    Pharmaceutical Leaders</p>
+            <!-- Aegis Workflow -->
+            <div
+              class="bg-primary-container rounded-2xl p-8 text-white relative overflow-hidden"
+            >
+              <div class="absolute top-0 right-0 p-4">
+                <span
+                  class="px-3 py-1 bg-secondary rounded-full text-[10px] font-bold"
+                  >OPTIMIZED</span
+                >
+              </div>
+              <div class="flex items-center gap-3 mb-8">
+                <span class="material-symbols-outlined text-secondary-fixed"
+                  >auto_awesome</span
+                >
+                <h3 class="font-bold uppercase tracking-widest text-sm">
+                  Aegis AI Orchestration
+                </h3>
+              </div>
+              <ul class="space-y-6">
+                <li class="flex gap-4">
+                  <div
+                    class="w-6 h-6 rounded-full bg-secondary flex items-center justify-center shrink-0"
+                  >
+                    <span
+                      class="material-symbols-outlined text-[14px] text-white"
+                      style="font-variation-settings: &quot;FILL&quot; 1"
+                      >check</span
+                    >
+                  </div>
+                  <p class="text-sm text-blue-100">
+                    70-80% manual workload reduction through automation.
+                  </p>
+                </li>
+                <li class="flex gap-4">
+                  <div
+                    class="w-6 h-6 rounded-full bg-secondary flex items-center justify-center shrink-0"
+                  >
+                    <span
+                      class="material-symbols-outlined text-[14px] text-white"
+                      style="font-variation-settings: &quot;FILL&quot; 1"
+                      >check</span
+                    >
+                  </div>
+                  <p class="text-sm text-blue-100">
+                    Enterprise-grade AI ensures 99.9% data accuracy.
+                  </p>
+                </li>
+                <li class="flex gap-4">
+                  <div
+                    class="w-6 h-6 rounded-full bg-secondary flex items-center justify-center shrink-0"
+                  >
+                    <span
+                      class="material-symbols-outlined text-[14px] text-white"
+                      style="font-variation-settings: &quot;FILL&quot; 1"
+                      >check</span
+                    >
+                  </div>
+                  <p class="text-sm text-blue-100">
+                    Omni-channel routing for seamless global reach.
+                  </p>
+                </li>
+              </ul>
+              <div
+                class="mt-12 pt-8 border-t border-white/10 flex items-end justify-between"
+              >
+                <div>
+                  <div class="text-3xl font-black text-secondary-fixed">
+                    80%
+                  </div>
+                  <div
+                    class="text-[10px] font-bold uppercase tracking-wider text-blue-200"
+                  >
+                    Faster Turnaround
+                  </div>
+                </div>
+                <button
+                  class="text-xs font-bold underline hover:text-secondary-fixed transition-colors"
+                >
+                  See the full report
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Feature Cards (Bento Style) -->
+      <section class="py-24 bg-surface-container-low">
+        <div class="container mx-auto px-8 max-w-7xl">
+          <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Feature 1 -->
+            <div
+              class="md:col-span-2 bg-surface-container-lowest p-10 rounded-2xl flex flex-col justify-between group hover:-translate-y-1 transition-all"
+            >
+              <div>
                 <div
-                    class="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-50 grayscale hover:grayscale-0 transition-all">
-                    <div class="text-2xl font-black font-headline text-primary">PHARMACO</div>
-                    <div class="text-2xl font-black font-headline text-primary">BIOTECH_X</div>
-                    <div class="text-2xl font-black font-headline text-primary">GLOBAL_HEALTH</div>
-                    <div class="text-2xl font-black font-headline text-primary">MED_CORP</div>
+                  class="w-12 h-12 bg-primary/5 rounded-xl flex items-center justify-center mb-8"
+                >
+                  <span class="material-symbols-outlined text-primary"
+                    >priority_high</span
+                  >
                 </div>
+                <h3 class="text-2xl font-headline font-bold text-primary mb-4">
+                  Intelligent Prioritization
+                </h3>
+                <p class="text-slate-500 leading-relaxed max-w-md">
+                  Our AI ranks cases based on clinical significance and
+                  regulatory urgency, ensuring critical signals are never
+                  missed.
+                </p>
+              </div>
+              <div
+                class="mt-8 flex items-center gap-2 text-secondary font-bold text-sm"
+              >
+                Learn more
+                <span
+                  class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1"
+                  >arrow_forward</span
+                >
+              </div>
             </div>
-        </section>
-        <!-- Features Showcase (Before/After) -->
-        <section class="py-24 bg-surface">
-            <div class="container mx-auto px-8 max-w-7xl">
-                <div class="text-center mb-20">
-                    <h2 class="text-4xl font-headline font-extrabold text-primary mb-4 tracking-tight">Redefining
-                        Efficiency</h2>
-                    <p class="text-slate-500 max-w-2xl mx-auto">See how Aegis transforms traditional, labor-intensive
-                        workflows into streamlined AI-orchestrated safety engines.</p>
-                </div>
-                <div class="grid md:grid-cols-2 gap-8 items-stretch">
-                    <!-- Manual Workflow -->
-                    <div class="bg-surface-container-low rounded-2xl p-8 border border-outline-variant/5">
-                        <div class="flex items-center gap-3 mb-8">
-                            <span class="material-symbols-outlined text-error">history</span>
-                            <h3 class="font-bold text-primary uppercase tracking-widest text-sm">Legacy Manual Workflow
-                            </h3>
-                        </div>
-                        <ul class="space-y-6">
-                            <li class="flex gap-4">
-                                <div class="w-6 h-6 rounded-full bg-error/10 flex items-center justify-center shrink-0">
-                                    <span class="material-symbols-outlined text-[14px] text-error">close</span>
-                                </div>
-                                <p class="text-sm text-slate-600">Manual AE follow-up drafting takes 45-60 mins per
-                                    case.</p>
-                            </li>
-                            <li class="flex gap-4">
-                                <div class="w-6 h-6 rounded-full bg-error/10 flex items-center justify-center shrink-0">
-                                    <span class="material-symbols-outlined text-[14px] text-error">close</span>
-                                </div>
-                                <p class="text-sm text-slate-600">Human errors in data entry lead to compliance rework.
-                                </p>
-                            </li>ip
-                            <li class="flex gap-4">
-                                <div class="w-6 h-6 rounded-full bg-error/10 flex items-center justify-center shrink-0">
-                                    <span class="material-symbols-outlined text-[14px] text-error">close</span>
-                                </div>
-                                <p class="text-sm text-slate-600">Disconnected channels cause fragmented patient
-                                    history.</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- Aegis Workflow -->
-                    <div class="bg-primary-container rounded-2xl p-8 text-white relative overflow-hidden">
-                        <div class="absolute top-0 right-0 p-4">
-                            <span class="px-3 py-1 bg-secondary rounded-full text-[10px] font-bold">OPTIMIZED</span>
-                        </div>
-                        <div class="flex items-center gap-3 mb-8">
-                            <span class="material-symbols-outlined text-secondary-fixed">auto_awesome</span>
-                            <h3 class="font-bold uppercase tracking-widest text-sm">Aegis AI Orchestration</h3>
-                        </div>
-                        <ul class="space-y-6">
-                            <li class="flex gap-4">
-                                <div
-                                    class="w-6 h-6 rounded-full bg-secondary flex items-center justify-center shrink-0">
-                                    <span class="material-symbols-outlined text-[14px] text-white"
-                                        style="font-variation-settings: 'FILL' 1;">check</span>
-                                </div>
-                                <p class="text-sm text-blue-100">70-80% manual workload reduction through automation.
-                                </p>
-                            </li>
-                            <li class="flex gap-4">
-                                <div
-                                    class="w-6 h-6 rounded-full bg-secondary flex items-center justify-center shrink-0">
-                                    <span class="material-symbols-outlined text-[14px] text-white"
-                                        style="font-variation-settings: 'FILL' 1;">check</span>
-                                </div>
-                                <p class="text-sm text-blue-100">Enterprise-grade AI ensures 99.9% data accuracy.</p>
-                            </li>
-                            <li class="flex gap-4">
-                                <div
-                                    class="w-6 h-6 rounded-full bg-secondary flex items-center justify-center shrink-0">
-                                    <span class="material-symbols-outlined text-[14px] text-white"
-                                        style="font-variation-settings: 'FILL' 1;">check</span>
-                                </div>
-                                <p class="text-sm text-blue-100">Omni-channel routing for seamless global reach.</p>
-                            </li>
-                        </ul>
-                        <div class="mt-12 pt-8 border-t border-white/10 flex items-end justify-between">
-                            <div>
-                                <div class="text-3xl font-black text-secondary-fixed">80%</div>
-                                <div class="text-[10px] font-bold uppercase tracking-wider text-blue-200">Faster
-                                    Turnaround</div>
-                            </div>
-                            <button class="text-xs font-bold underline hover:text-secondary-fixed transition-colors">See
-                                the full report</button>
-                        </div>
-                    </div>
-                </div>
+            <!-- Feature 2 -->
+            <div
+              class="bg-surface-container-lowest p-10 rounded-2xl flex flex-col group hover:-translate-y-1 transition-all"
+            >
+              <div
+                class="w-12 h-12 bg-secondary/5 rounded-xl flex items-center justify-center mb-8"
+              >
+                <span class="material-symbols-outlined text-secondary"
+                  >checklist</span
+                >
+              </div>
+              <h3 class="text-xl font-headline font-bold text-primary mb-4">
+                Smart Question Selection
+              </h3>
+              <p class="text-sm text-slate-500 leading-relaxed">
+                Dynamic logic adapts questionnaires based on patient response
+                patterns in real-time.
+              </p>
             </div>
-        </section>
-        <!-- Feature Cards (Bento Style) -->
-        <section class="py-24 bg-surface-container-low">
-            <div class="container mx-auto px-8 max-w-7xl">
-                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    <!-- Feature 1 -->
+            <!-- Feature 3 -->
+            <div
+              class="bg-surface-container-lowest p-10 rounded-2xl flex flex-col group hover:-translate-y-1 transition-all"
+            >
+              <div
+                class="w-12 h-12 bg-tertiary-container/5 rounded-xl flex items-center justify-center mb-8"
+              >
+                <span
+                  class="material-symbols-outlined text-on-tertiary-container"
+                  >router</span
+                >
+              </div>
+              <h3 class="text-xl font-headline font-bold text-primary mb-4">
+                Multi-channel Routing
+              </h3>
+              <p class="text-sm text-slate-500 leading-relaxed">
+                Engage users where they are: Email, Phone, SMS, or Secure Web
+                Portal.
+              </p>
+            </div>
+            <!-- Feature 4 -->
+            <div
+              class="md:col-span-2 lg:col-span-4 bg-primary p-10 rounded-2xl text-white flex flex-col md:flex-row items-center gap-12 overflow-hidden"
+            >
+              <div class="md:w-1/2">
+                <h3 class="text-3xl font-headline font-extrabold mb-6">
+                  Global Reach, Local Fluency
+                </h3>
+                <p class="text-blue-100/70 mb-8 leading-relaxed">
+                  Enterprise-grade multi-language support covers major global
+                  regions. Communicate natively across English, Hindi, Spanish,
+                  and French with localized clinical terminology.
+                </p>
+                <div class="flex gap-4">
+                  <span
+                    class="px-3 py-1 bg-white/10 rounded-md text-xs font-semibold"
+                    >English</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-white/10 rounded-md text-xs font-semibold"
+                    >हिन्दी</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-white/10 rounded-md text-xs font-semibold"
+                    >Español</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-white/10 rounded-md text-xs font-semibold"
+                    >Français</span
+                  >
+                </div>
+              </div>
+              <div
+                class="md:w-1/2 w-full h-64 bg-white/5 rounded-xl border border-white/10 flex items-center justify-center"
+              >
+                <div
+                  class="relative w-full h-full p-8 flex items-center justify-center"
+                >
+                  <span
+                    class="material-symbols-outlined text-[120px] text-white/10 absolute rotate-12"
+                    >language</span
+                  >
+                  <div class="text-center relative z-10">
+                    <div class="text-5xl font-black text-secondary-fixed mb-2">
+                      5
+                    </div>
                     <div
-                        class="md:col-span-2 bg-surface-container-lowest p-10 rounded-2xl flex flex-col justify-between group hover:-translate-y-1 transition-all">
-                        <div>
-                            <div class="w-12 h-12 bg-primary/5 rounded-xl flex items-center justify-center mb-8">
-                                <span class="material-symbols-outlined text-primary">priority_high</span>
-                            </div>
-                            <h3 class="text-2xl font-headline font-bold text-primary mb-4">Intelligent Prioritization
-                            </h3>
-                            <p class="text-slate-500 leading-relaxed max-w-md">Our AI ranks cases based on clinical
-                                significance and regulatory urgency, ensuring critical signals are never missed.</p>
-                        </div>
-                        <div class="mt-8 flex items-center gap-2 text-secondary font-bold text-sm">
-                            Learn more <span
-                                class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
-                        </div>
+                      class="text-xs uppercase tracking-[0.2em] font-bold text-blue-200"
+                    >
+                      Global Regions Fully Supported
                     </div>
-                    <!-- Feature 2 -->
-                    <div
-                        class="bg-surface-container-lowest p-10 rounded-2xl flex flex-col group hover:-translate-y-1 transition-all">
-                        <div class="w-12 h-12 bg-secondary/5 rounded-xl flex items-center justify-center mb-8">
-                            <span class="material-symbols-outlined text-secondary">checklist</span>
-                        </div>
-                        <h3 class="text-xl font-headline font-bold text-primary mb-4">Smart Question Selection</h3>
-                        <p class="text-sm text-slate-500 leading-relaxed">Dynamic logic adapts questionnaires based on
-                            patient response patterns in real-time.</p>
-                    </div>
-                    <!-- Feature 3 -->
-                    <div
-                        class="bg-surface-container-lowest p-10 rounded-2xl flex flex-col group hover:-translate-y-1 transition-all">
-                        <div class="w-12 h-12 bg-tertiary-container/5 rounded-xl flex items-center justify-center mb-8">
-                            <span class="material-symbols-outlined text-on-tertiary-container">router</span>
-                        </div>
-                        <h3 class="text-xl font-headline font-bold text-primary mb-4">Multi-channel Routing</h3>
-                        <p class="text-sm text-slate-500 leading-relaxed">Engage users where they are: Email, Phone,
-                            SMS, or Secure Web Portal.</p>
-                    </div>
-                    <!-- Feature 4 -->
-                    <div
-                        class="md:col-span-2 lg:col-span-4 bg-primary p-10 rounded-2xl text-white flex flex-col md:flex-row items-center gap-12 overflow-hidden">
-                        <div class="md:w-1/2">
-                            <h3 class="text-3xl font-headline font-extrabold mb-6">Global Reach, Local Fluency</h3>
-                            <p class="text-blue-100/70 mb-8 leading-relaxed">Enterprise-grade multi-language support
-                                covers major global regions. Communicate natively across English, Hindi, Spanish, and
-                                French with localized clinical terminology.</p>
-                            <div class="flex gap-4">
-                                <span class="px-3 py-1 bg-white/10 rounded-md text-xs font-semibold">English</span>
-                                <span class="px-3 py-1 bg-white/10 rounded-md text-xs font-semibold">हिन्दी</span>
-                                <span class="px-3 py-1 bg-white/10 rounded-md text-xs font-semibold">Español</span>
-                                <span class="px-3 py-1 bg-white/10 rounded-md text-xs font-semibold">Français</span>
-                            </div>
-                        </div>
-                        <div
-                            class="md:w-1/2 w-full h-64 bg-white/5 rounded-xl border border-white/10 flex items-center justify-center">
-                            <div class="relative w-full h-full p-8 flex items-center justify-center">
-                                <span
-                                    class="material-symbols-outlined text-[120px] text-white/10 absolute rotate-12">language</span>
-                                <div class="text-center relative z-10">
-                                    <div class="text-5xl font-black text-secondary-fixed mb-2">5</div>
-                                    <div class="text-xs uppercase tracking-[0.2em] font-bold text-blue-200">Global
-                                        Regions Fully Supported</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
-        </section>
-        <!-- Statistics Dashboard -->
-        <section class="py-24 bg-surface">
-            <div class="container mx-auto px-8 max-w-7xl">
-                <div class="bg-surface-container-lowest rounded-3xl p-12 shadow-sm border border-outline-variant/10">
-                    <div class="grid grid-cols-1 lg:grid-cols-4 gap-12">
-                        <div class="lg:col-span-1">
-                            <h2 class="text-3xl font-headline font-extrabold text-primary mb-4">Platform Metrics</h2>
-                            <p class="text-slate-500 text-sm mb-8">Real-time performance across the Aegis global safety
-                                network.</p>
-                            <div class="space-y-4">
-                                <div class="flex items-center gap-2">
-                                    <div class="w-2 h-2 rounded-full bg-green-500"></div>
-                                    <span class="text-xs font-bold text-slate-400">Live Orchestration</span>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <div class="w-2 h-2 rounded-full bg-blue-500"></div>
-                                    <span class="text-xs font-bold text-slate-400">AI Validation Active</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-8">
-                            <div
-                                class="p-8 bg-surface-container-low rounded-2xl flex flex-col items-center text-center">
-                                <span class="text-5xl font-black text-primary mb-4">70-80%</span>
-                                <span class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">Efficiency
-                                    Gain</span>
-                                <div class="w-full h-1.5 bg-outline-variant/20 rounded-full overflow-hidden">
-                                    <div class="w-[75%] h-full bg-primary"></div>
-                                </div>
-                            </div>
-                            <div
-                                class="p-8 bg-surface-container-low rounded-2xl flex flex-col items-center text-center">
-                                <span class="text-5xl font-black text-secondary mb-4">4</span>
-                                <span class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">Native
-                                    Languages</span>
-                                <div class="flex gap-2">
-                                    <div class="w-4 h-4 rounded-full bg-secondary-container"></div>
-                                    <div class="w-4 h-4 rounded-full bg-secondary"></div>
-                                    <div class="w-4 h-4 rounded-full bg-primary"></div>
-                                    <div class="w-4 h-4 rounded-full bg-tertiary-container"></div>
-                                </div>
-                            </div>
-                            <div
-                                class="p-8 bg-surface-container-low rounded-2xl flex flex-col items-center text-center">
-                                <span class="text-5xl font-black text-on-tertiary-container mb-4">Omni</span>
-                                <span class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">Channel
-                                    Routing</span>
-                                <div class="flex gap-3 text-slate-400">
-                                    <span class="material-symbols-outlined text-sm">mail</span>
-                                    <span class="material-symbols-outlined text-sm">call</span>
-                                    <span class="material-symbols-outlined text-sm">sms</span>
-                                    <span class="material-symbols-outlined text-sm">language</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          </div>
+        </div>
+      </section>
+      <!-- Statistics Dashboard -->
+      <section class="py-24 bg-surface">
+        <div class="container mx-auto px-8 max-w-7xl">
+          <div
+            class="bg-surface-container-lowest rounded-3xl p-12 shadow-sm border border-outline-variant/10"
+          >
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-12">
+              <div class="lg:col-span-1">
+                <h2
+                  class="text-3xl font-headline font-extrabold text-primary mb-4"
+                >
+                  Platform Metrics
+                </h2>
+                <p class="text-slate-500 text-sm mb-8">
+                  Real-time performance across the Aegis global safety network.
+                </p>
+                <div class="space-y-4">
+                  <div class="flex items-center gap-2">
+                    <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                    <span class="text-xs font-bold text-slate-400"
+                      >Live Orchestration</span
+                    >
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                    <span class="text-xs font-bold text-slate-400"
+                      >AI Validation Active</span
+                    >
+                  </div>
                 </div>
-            </div>
-        </section>
-        <!-- Final CTA -->
-        <section class="py-24 relative overflow-hidden">
-            <div class="absolute inset-0 z-0">
-                <img class="w-full h-full object-cover"
-                    data-alt="modern clinical research lab with high-tech monitors and professional medical staff in soft focus background"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK4_NTf_ZL1dbe9U5dL8H2PVBZeJK3tsQpAZSfbXZbZUk-eYFlmuHS7i28CUotZEmfrYyBZg8-JNnKfiEKPb3BceNlv57mjW2xAHGqYMEr9MhZ3tvW4M9uUKO6Fws5PpUBXsed9kegPTGBWZ5NWhq3McEuuzJhnkj06v6gqktZFY3jct4IFHj9QQZHf5DyaWg6nDav7f8cFiOxF2dQ8kYwDEL3hGaS5rkSAIqQ4M0F8AJl_auy0xCAoXUGoteRuQpAUSD8WePxppv5" />
-                <div class="absolute inset-0 bg-primary/90 mix-blend-multiply"></div>
-            </div>
-            <div class="container mx-auto px-8 relative z-10 max-w-4xl text-center">
-                <h2 class="text-4xl md:text-5xl font-headline font-extrabold text-white mb-8">Start Your Compliance
-                    Journey Today</h2>
-                <p class="text-xl text-blue-100/80 mb-12">Join the next generation of pharmaceutical safety leaders
-                    using Aegis to transform AE management.</p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <button
-                        class="px-10 py-5 bg-secondary text-white rounded-lg font-bold text-xl hover:bg-secondary/90 transition-all shadow-2xl">Request
-                        Early Access</button>
-                    <button
-                        class="px-10 py-5 bg-white/10 text-white border border-white/30 backdrop-blur-md rounded-lg font-bold text-xl hover:bg-white/20 transition-all">Speak
-                        to an Expert</button>
+              </div>
+              <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div
+                  class="p-8 bg-surface-container-low rounded-2xl flex flex-col items-center text-center"
+                >
+                  <span class="text-5xl font-black text-primary mb-4"
+                    >70-80%</span
+                  >
+                  <span
+                    class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4"
+                    >Efficiency Gain</span
+                  >
+                  <div
+                    class="w-full h-1.5 bg-outline-variant/20 rounded-full overflow-hidden"
+                  >
+                    <div class="w-[75%] h-full bg-primary"></div>
+                  </div>
                 </div>
+                <div
+                  class="p-8 bg-surface-container-low rounded-2xl flex flex-col items-center text-center"
+                >
+                  <span class="text-5xl font-black text-secondary mb-4">4</span>
+                  <span
+                    class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4"
+                    >Native Languages</span
+                  >
+                  <div class="flex gap-2">
+                    <div
+                      class="w-4 h-4 rounded-full bg-secondary-container"
+                    ></div>
+                    <div class="w-4 h-4 rounded-full bg-secondary"></div>
+                    <div class="w-4 h-4 rounded-full bg-primary"></div>
+                    <div
+                      class="w-4 h-4 rounded-full bg-tertiary-container"
+                    ></div>
+                  </div>
+                </div>
+                <div
+                  class="p-8 bg-surface-container-low rounded-2xl flex flex-col items-center text-center"
+                >
+                  <span
+                    class="text-5xl font-black text-on-tertiary-container mb-4"
+                    >Omni</span
+                  >
+                  <span
+                    class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4"
+                    >Channel Routing</span
+                  >
+                  <div class="flex gap-3 text-slate-400">
+                    <span class="material-symbols-outlined text-sm">mail</span>
+                    <span class="material-symbols-outlined text-sm">call</span>
+                    <span class="material-symbols-outlined text-sm">sms</span>
+                    <span class="material-symbols-outlined text-sm"
+                      >language</span
+                    >
+                  </div>
+                </div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
+      <!-- Final CTA -->
+      <section class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+          <img
+            class="w-full h-full object-cover"
+            data-alt="modern clinical research lab with high-tech monitors and professional medical staff in soft focus background"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK4_NTf_ZL1dbe9U5dL8H2PVBZeJK3tsQpAZSfbXZbZUk-eYFlmuHS7i28CUotZEmfrYyBZg8-JNnKfiEKPb3BceNlv57mjW2xAHGqYMEr9MhZ3tvW4M9uUKO6Fws5PpUBXsed9kegPTGBWZ5NWhq3McEuuzJhnkj06v6gqktZFY3jct4IFHj9QQZHf5DyaWg6nDav7f8cFiOxF2dQ8kYwDEL3hGaS5rkSAIqQ4M0F8AJl_auy0xCAoXUGoteRuQpAUSD8WePxppv5"
+          />
+          <div class="absolute inset-0 bg-primary/90 mix-blend-multiply"></div>
+        </div>
+        <div class="container mx-auto px-8 relative z-10 max-w-4xl text-center">
+          <h2
+            class="text-4xl md:text-5xl font-headline font-extrabold text-white mb-8"
+          >
+            Start Your Compliance Journey Today
+          </h2>
+          <p class="text-xl text-blue-100/80 mb-12">
+            Join the next generation of pharmaceutical safety leaders using
+            Aegis to transform AE management.
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <button
+              class="px-10 py-5 bg-secondary text-white rounded-lg font-bold text-xl hover:bg-secondary/90 transition-all shadow-2xl"
+            >
+              Request Early Access
+            </button>
+            <button
+              class="px-10 py-5 bg-white/10 text-white border border-white/30 backdrop-blur-md rounded-lg font-bold text-xl hover:bg-white/20 transition-all"
+            >
+              Speak to an Expert
+            </button>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- Footer -->
-    <footer class="bg-slate-50 dark:bg-slate-950 w-full py-12 px-8 tonal-layering surface-container-low">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
-            <div class="col-span-2 md:col-span-1">
-                <div class="text-lg font-black text-blue-900 dark:text-blue-300 mb-4">Aegis</div>
-                <p class="text-slate-500 text-xs leading-relaxed max-w-xs">Automating the future of drug safety and
-                    pharmacovigilance with ethical, enterprise AI.</p>
-            </div>
-            <div>
-                <h4 class="font-bold text-slate-900 dark:text-slate-100 text-sm mb-4">Company</h4>
-                <ul class="space-y-2">
-                    <li><a class="text-slate-500 dark:text-slate-400 hover:underline text-xs" href="#">About Us</a></li>
-                    <li><a class="text-slate-500 dark:text-slate-400 hover:underline text-xs" href="#">Careers</a></li>
-                    <li><a class="text-slate-500 dark:text-slate-400 hover:underline text-xs" href="#">Press</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-bold text-slate-900 dark:text-slate-100 text-sm mb-4">Resources</h4>
-                <ul class="space-y-2">
-                    <li><a class="text-slate-500 dark:text-slate-400 hover:underline text-xs" href="#">Documentation</a>
-                    </li>
-                    <li><a class="text-slate-500 dark:text-slate-400 hover:underline text-xs" href="#">API Reference</a>
-                    </li>
-                    <li><a class="text-slate-500 dark:text-slate-400 hover:underline text-xs" href="#">Support</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-bold text-slate-900 dark:text-slate-100 text-sm mb-4">Legal</h4>
-                <ul class="space-y-2">
-                    <li><a class="text-slate-500 dark:text-slate-400 hover:underline text-xs" href="#">Privacy
-                            Policy</a></li>
-                    <li><a class="text-slate-500 dark:text-slate-400 hover:underline text-xs" href="#">Terms of
-                            Service</a></li>
-                    <li><a class="text-slate-500 dark:text-slate-400 hover:underline text-xs"
-                            href="solutions.html">Compliance</a></li>
-                </ul>
-            </div>
+    <footer
+      class="bg-slate-50 dark:bg-slate-950 w-full py-12 px-8 tonal-layering surface-container-low"
+    >
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+        <div class="col-span-2 md:col-span-1">
+          <div class="text-lg font-black text-blue-900 dark:text-blue-300 mb-4">
+            Aegis
+          </div>
+          <p class="text-slate-500 text-xs leading-relaxed max-w-xs">
+            Automating the future of drug safety and pharmacovigilance with
+            ethical, enterprise AI.
+          </p>
         </div>
-        <div
-            class="max-w-7xl mx-auto mt-12 pt-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="text-slate-500 dark:text-slate-400 text-xs">© 2024 Aegis Pharmacovigilance. All rights reserved.
-            </p>
-            <div class="flex gap-6">
-                <a class="text-slate-400 hover:text-blue-900 transition-colors" href="#"><span
-                        class="material-symbols-outlined text-lg">public</span></a>
-                <a class="text-slate-400 hover:text-blue-900 transition-colors" href="#"><span
-                        class="material-symbols-outlined text-lg">share</span></a>
-            </div>
+        <div>
+          <h4 class="font-bold text-slate-900 dark:text-slate-100 text-sm mb-4">
+            Company
+          </h4>
+          <ul class="space-y-2">
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:underline text-xs"
+                href="#"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:underline text-xs"
+                href="#"
+                >Careers</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:underline text-xs"
+                href="#"
+                >Press</a
+              >
+            </li>
+          </ul>
         </div>
+        <div>
+          <h4 class="font-bold text-slate-900 dark:text-slate-100 text-sm mb-4">
+            Resources
+          </h4>
+          <ul class="space-y-2">
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:underline text-xs"
+                href="#"
+                >Documentation</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:underline text-xs"
+                href="#"
+                >API Reference</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:underline text-xs"
+                href="#"
+                >Support</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-slate-900 dark:text-slate-100 text-sm mb-4">
+            Legal
+          </h4>
+          <ul class="space-y-2">
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:underline text-xs"
+                href="#"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:underline text-xs"
+                href="#"
+                >Terms of Service</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:underline text-xs"
+                href="solutions.html"
+                >Compliance</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="max-w-7xl mx-auto mt-12 pt-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-4"
+      >
+        <p class="text-slate-500 dark:text-slate-400 text-xs">
+          © 2024 Aegis Pharmacovigilance. All rights reserved.
+        </p>
+        <div class="flex gap-6">
+          <a
+            class="text-slate-400 hover:text-blue-900 transition-colors"
+            href="#"
+            ><span class="material-symbols-outlined text-lg">public</span></a
+          >
+          <a
+            class="text-slate-400 hover:text-blue-900 transition-colors"
+            href="#"
+            ><span class="material-symbols-outlined text-lg">share</span></a
+          >
+        </div>
+      </div>
     </footer>
     <script>
-        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            if (menu.classList.contains('hidden')) {
-                menu.classList.remove('hidden');
-                menu.classList.add('flex');
-            } else {
-                menu.classList.add('hidden');
-                menu.classList.remove('flex');
-            }
+      document
+        .getElementById("mobile-menu-btn")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          if (menu.classList.contains("hidden")) {
+            menu.classList.remove("hidden");
+            menu.classList.add("flex");
+          } else {
+            menu.classList.add("hidden");
+            menu.classList.remove("flex");
+          }
         });
     </script>
-</body>
-
+  </body>
 </html>
