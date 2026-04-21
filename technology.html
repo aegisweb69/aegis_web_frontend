@@ -100,8 +100,22 @@
 <a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors" href="solutions.html">Compliance</a>
 <a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-100 transition-colors" href="pricing.html">Pricing</a>
 </div>
-<button class="bg-primary-container text-white px-5 py-2 rounded-md font-bold hover:brightness-110 active:scale-90 transition-all">Book a Demo</button>
+<div class="flex items-center gap-4">
+<button class="hidden md:block bg-primary-container text-white px-5 py-2 rounded-md font-bold hover:brightness-110 active:scale-90 transition-all">Book a Demo</button>
+<button id="mobile-menu-btn" class="md:hidden text-slate-600 dark:text-slate-300 focus:outline-none flex items-center">
+    <span class="material-symbols-outlined text-2xl">menu</span>
+</button>
 </div>
+</div>
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white dark:bg-slate-900 shadow-lg border-t border-slate-100 dark:border-slate-800 flex-col z-50">
+            <div class="flex flex-col px-8 py-4 space-y-4">
+                <a class="text-slate-600 dark:text-slate-400" href="technology.html">Features</a>
+                <a class="text-blue-700 dark:text-blue-400" href="solutions.html">Solutions</a>
+                <a class="text-slate-600 dark:text-slate-400" href="solutions.html">Compliance</a>
+                <a class="text-slate-600 dark:text-slate-400" href="pricing.html">Pricing</a>
+                <button class="bg-primary-container text-white px-5 py-3 rounded-md font-bold w-full mt-2">Book a Demo</button>
+            </div>
+        </div>
 </nav>
 <main>
 <!-- Hero Section: Editorial Architecture -->
@@ -354,4 +368,16 @@
 <span class="opacity-80">© 2024 Aegis Pharmacovigilance. All rights reserved.</span>
 </div>
 </footer>
+<script>
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+        const menu = document.getElementById('mobile-menu');
+        if (menu.classList.contains('hidden')) {
+            menu.classList.remove('hidden');
+            menu.classList.add('flex');
+        } else {
+            menu.classList.add('hidden');
+            menu.classList.remove('flex');
+        }
+    });
+</script>
 </body></html>
